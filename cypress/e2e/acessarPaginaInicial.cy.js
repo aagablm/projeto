@@ -7,6 +7,6 @@ describe("Página Inicial", () => {
   
       // Verifica se o botão 'Adicionar ao Carrinho' está presente
       cy.get("button").contains("Adicionar ao Carrinho")
-
+})
   });
   
