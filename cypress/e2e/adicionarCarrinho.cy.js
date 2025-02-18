@@ -10,6 +10,12 @@ describe("Página Inicial", () => {
   
       // Verifica se a quantidade de itens no carrinho está correta
       cy.get("#quantidade").should("have.text", "1");
+        
+        // Verifica se o botão 'Adicionar ao Carrinho' está presente
+      cy.get("button").contains("Adicionar ao Carrinho").click();
+  
+      // Verifica se a quantidade de itens no carrinho está correta
+      cy.get("#quantidade").should("have.text", "2");
     });
   });
   
