@@ -1,5 +1,5 @@
-describe("Adicionar itens no carrinho", () => {
-    it("Deve adicionar itens no carrinho e verificar", () => {
+describe("Remover itens no carrinho", () => {
+    it("Deve remover itens no carrinho e verificar", () => {
       cy.visit("http://localhost:3000");
   
       // Verifica se o título da página está correto
@@ -10,12 +10,14 @@ describe("Adicionar itens no carrinho", () => {
   
       // Verifica se a quantidade de itens no carrinho está correta
       cy.get("#quantidade").should("have.text", "1");
-        
-        // Verifica se o botão 'Adicionar ao Carrinho' está presente
-      cy.get("button").contains("Adicionar ao Carrinho").click();
-  
-      // Verifica se a quantidade de itens no carrinho está correta
-      cy.get("#quantidade").should("have.text", "2");
+    
+      cy.get('#carrinho > button').click();
+      
+      cy.get("li").should("have.be", "visible");
+
+      cy.get('li > button').click();
+
+      cy.get("#quantidade").should("have.text", "0");
     });
   });
   
