@@ -1,14 +1,14 @@
-# CI/CD Pipeline com Cypress
+# 🚀 CI/CD Pipeline com Cypress 
 
 Este repositório contém um exemplo de pipeline CI/CD utilizando **GitHub Actions** para automatizar o processo de integração contínua e testes end-to-end com **Cypress**.
 
-## Como Funciona
+## 🔧 Como Funciona 
 
 1. **Instalação das Dependências**: O workflow começa com a instalação das dependências do projeto usando `npm install`.
 2. **Execução do Servidor**: Em seguida, o servidor é iniciado em segundo plano para que os testes possam ser executados contra ele.
 3. **Execução dos Testes Cypress**: Após o servidor estar rodando, o Cypress executa os testes definidos na configuração.
 
-## Como Usar
+## 👩‍💻 Como Usar
 
 1. **Clone o repositório**:
    
