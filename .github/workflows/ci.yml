@@ -50,6 +50,16 @@ jobs:
         run: |
           npm install
 
+      # Inicia o servidor
+      - name: Start the server
+        run: |
+          nohup npm start &  # Executa o servidor em segundo plano
+
+      # Espera o servidor iniciar
+      - name: Wait for server to start
+        run: |
+          sleep 10  # Aguarda 10 segundos para o servidor iniciar (ajuste conforme necessário)
+
       # Executa os testes do Cypress
       - name: Cypress run
         uses: cypress-io/github-action@v2
